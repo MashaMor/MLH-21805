@@ -3,6 +3,7 @@ const name = {
     "symbol1": "i",
     "symbol70": "",
     "symbolSpecial": "",
+
 }
 
 const gender = {
