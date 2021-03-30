@@ -1,5 +1,8 @@
 const name = {
     "default": "QueenBee!1",
+    "symbol1": "i",
+    "symbol70": "",
+    "symbolSpecial": "",
 }
 
 const gender = {
