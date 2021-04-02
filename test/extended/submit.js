@@ -10,9 +10,14 @@ describe('Submit button', function () {
             browser.url('');
         });
 
-    });
+        beforeEach('refresh browser', function() {
+            browser.refresh();
+        });
 
-    describe('Negative tests', function () {
+        it('TC-176 User opens the application, "Submit" button is disabled', function () {
+            let submitBtn = $(sel.submit).isEnabled();
+            expect(submitBtn).toEqual(false);
+        });
 
     });
 
