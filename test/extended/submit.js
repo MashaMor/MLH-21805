@@ -19,6 +19,12 @@ describe('Submit button', function () {
             expect(submitBtn).toEqual(false);
         });
 
+        it('TC-177 User reloads the application, "Submit" button is disabled', function () {
+            browser.refresh()
+            let submitBtn = $(sel.submit).isEnabled();
+            expect(submitBtn).toEqual(false);
+        });
+
     });
 
 });
