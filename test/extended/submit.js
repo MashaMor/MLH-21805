@@ -24,7 +24,6 @@ describe('Submit button', function () {
             let submitBtn = $(sel.submit).isEnabled();
             expect(submitBtn).toEqual(false);
 
-
         });
 
     });
