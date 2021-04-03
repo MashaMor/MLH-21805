@@ -28,7 +28,10 @@ const expResults = {
     "storyAge": "1234567890",
     "storyAges1": "year",
     "storyAges2AndMore": "years",
-    "moral": "Moral: When you quarrel amongst yourselves, someone else gains from it."
+    "moral": "Moral: When you quarrel amongst yourselves, someone else gains from it.",
+    "image-": "/static/error.86e8f937.png",
+    "resetBtnLabel": "Try again!",
+    "emptyField": ""
 
 
 }
