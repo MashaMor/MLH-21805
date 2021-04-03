@@ -1,6 +1,6 @@
 import sel from '../../data/selectors';
 import {name, gender, age, story} from '../../data/testData';
-import {inputNameGenderStory} from '../../helpers/methods';
+import {inputValues4} from '../../helpers/methods';
 import exp from "../../data/expected.js";
 
 describe('Age field suit', function () {
@@ -87,68 +87,68 @@ describe('Age field suit', function () {
         it('TC-075 Empty Age field', function () {
             $(sel.age).setValue(age.digit1);
             $(sel.age).keys(['Backspace']);
-            let error = $(sel.error).waitForDisplayed(2000);
+            let error = $(sel.error).waitForDisplayed();
             expect(error).toEqual(true);
         });
 
         it('TC-076 Age field contains one digit: "0"', function () {
             $(sel.age).setValue(age.zero);
-            let error = $(sel.error).waitForDisplayed(2000);
+            let error = $(sel.error).waitForDisplayed();
             expect(error).toEqual(true);
         });
 
         it('TC-077 age field contains more than 12 digits', function () {
             $(sel.age).setValue(age.digits13);
-            let error = $(sel.error).waitForDisplayed(2000);
+            let error = $(sel.error).waitForDisplayed();
             expect(error).toEqual(true);
         });
 
         it('TC-078 Age field contains letters', function () {
             $(sel.age).setValue(age.letters);
-            let error = $(sel.error).waitForDisplayed(2000);
+            let error = $(sel.error).waitForDisplayed();
             expect(error).toEqual(true);
         });
 
         it('TC-079 Age field contains symbols', function () {
             $(sel.age).setValue(age.symbols);
-            let error = $(sel.error).waitForDisplayed(2000);
+            let error = $(sel.error).waitForDisplayed();
             expect(error).toEqual(true);
         });
 
         it('TC-080 Age field contains negative digits', function () {
             $(sel.age).setValue(age.digitsNegative);
-            let error = $(sel.error).waitForDisplayed(2000);
+            let error = $(sel.error).waitForDisplayed();
             expect(error).toEqual(true);
         });
 
         it('TC-081 Age field contains float numbers', function () {
             $(sel.age).setValue(age.floatNumbers);
-            let error = $(sel.error).waitForDisplayed(2000);
+            let error = $(sel.error).waitForDisplayed();
             expect(error).toEqual(true);
         });
 
         it('TC-082 Age field contains russian letters', function () {
             $(sel.age).setValue(age.lettersRus);
-            let error = $(sel.error).waitForDisplayed(2000)
+            let error = $(sel.error).waitForDisplayed()
             expect(error).toEqual(true);
         });
 
         it('TC-085 Age field\'s spin down from one digit: "1"', function () {
             $(sel.age).setValue(age.digit1);
             $(sel.ageSpinDown).click();
-            let error = $(sel.error).waitForDisplayed(2000);
+            let error = $(sel.error).waitForDisplayed();
             expect(error).toEqual(true);
         });
 
         it('TC-086 Age field\'s spin up after 12 digit\'s number', function () {
             $(sel.age).setValue(age.digits12);
             $(sel.ageSpinUp).click();
-            let error = $(sel.error).waitForDisplayed(2000);
+            let error = $(sel.error).waitForDisplayed();
             expect(error).toEqual(true);
         });
 
         it('TC-198 Empty Age field (Submit button is disabled)', function () {
-            inputNameGenderStory(name.default, gender.she, story.comedy);
+            inputValues4(name.default, gender.she, -1, story.comedy);
             let submBtn = $(sel.submit).isEnabled();
             expect(submBtn).toEqual(false);
         });
