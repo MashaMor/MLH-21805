@@ -1,4 +1,4 @@
-import exp from "../../data/expected.json";
+import exp from "../../data/expected.js";
 import sel from '../../data/selectors';
 import  {name, gender, age, story} from '../../data/testData';
 import inputValues4 from '../../helpers/methods';
