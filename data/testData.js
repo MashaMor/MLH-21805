@@ -14,6 +14,19 @@ const gender = {
 
 const age = {
     "default": "1234567890",
+    "digit1": "1",
+    "digit2": "2",
+    "digits12": "999999999999",
+    "digits13": "9999999999999",
+    "digitsAny": "1234567890",
+    "digitsWithSpaces": "123 78 9",
+    "digitsWith0": "00001",
+    "letters": "abcdef",
+    "zero": "0",
+    "symbols": ".,/!@#{}[]",
+    "digitsNegative": "-1",
+    "floatNumbers": "1.5",
+    "lettersRus": "абвгдежзик",
 }
 
 const story = {
@@ -26,4 +39,8 @@ const story = {
     "comedy": 6
 }
 
-module.exports = {name, gender, age, story}
+const generatedStory = {
+    "story": 0,
+    "moral": 1
+}
+module.exports = {name, gender, age, story, generatedStory}
