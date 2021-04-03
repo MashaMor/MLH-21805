@@ -35,7 +35,14 @@ const expResults = {
     "resetBtnLabel": "Try again!",
     "emptyField": "",
     "one": "1",
-    "two": "2"
+    "two": "2",
+    "storyOne": "Overcoming the Monster",
+    "storyTwo": "Rebirth",
+    "storyThree": "Quest",
+    "storyFour": "Journey and Return",
+    "storyFive": "Rags and Riches",
+    "storySix": "Tragedy",
+    "storySeven": "Comedy"
 
 
 }
