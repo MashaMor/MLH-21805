@@ -26,7 +26,7 @@ const age = {
     "symbols": ".,/!@#{}[]",
     "digitsNegative": "-1",
     "floatNumbers": "1.5",
-    "lettersRus": "абвгдежзик"
+    "lettersRus": "абвгдежзик",
 }
 
 const story = {
@@ -39,4 +39,8 @@ const story = {
     "comedy": 6
 }
 
-module.exports = {name, gender, age, story}
+const generatedStory = {
+    "story": 0,
+    "moral": 1
+}
+module.exports = {name, gender, age, story, generatedStory}
