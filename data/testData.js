@@ -14,6 +14,8 @@ const gender = {
 
 const age = {
     "default": "1234567890",
+    "digit1": "1",
+    "digit2": "2",
 }
 
 const story = {
@@ -26,4 +28,8 @@ const story = {
     "comedy": 6
 }
 
-module.exports = {name, gender, age, story}
+const generatedStory = {
+    "story": 0,
+    "moral": 1
+}
+module.exports = {name, gender, age, story, generatedStory}

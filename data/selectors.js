@@ -27,6 +27,9 @@ const elements = {
     "outside": "#root",
     "imageThumbnail": ".ant-upload-list-item-thumbnail",
     "binIcon": ".ant-upload-list-item-actions",
+    "storyTitle": "h4",
+    "avatar": "img[src=/static/error/static/error.86e8f937.png]",
+    "storyText": ".card-text"
 }
 
 module.exports = elements;
