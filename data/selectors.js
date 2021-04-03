@@ -5,6 +5,7 @@ const elements = {
     "name": "#name",
     "genderLabel": "label[for=gender]",
     "radioButtons": ".ant-radio",
+    "radioSelected": ".ant-radio-input",
     "radioButtonsL": ".ant-radio-wrapper",
     "ageLabel": "label[for=age]",
     "age": "#age",
@@ -28,7 +29,7 @@ const elements = {
     "imageThumbnail": ".ant-upload-list-item-thumbnail",
     "binIcon": ".ant-upload-list-item-actions",
     "storyTitle": "h4",
-    "avatar": "img[src=/static/error/static/error.86e8f937.png]",
+    "avatar": ".error__pic",
     "storyText": ".card-text"
 }
 
