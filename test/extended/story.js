@@ -1,7 +1,7 @@
 import exp from "../../data/expected.js";
 import sel from '../../data/selectors';
 import  {name, gender, age, story} from '../../data/testData';
-import inputValues4 from '../../helpers/methods';
+import {inputValues4, storySwitch} from '../../helpers/methods';
 
 describe('Story field test', function () {
 
@@ -74,392 +74,264 @@ describe('Story field test', function () {
     });
 
     it('TC-101 Change the Story Type = "Overcoming the Monster" to "Rebirth"',  function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.overcomingTheMonster].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.rebirth].click();
+        storySwitch(story.overcomingTheMonster, story.rebirth);
         let read = $$(sel.storyList)[story.rebirth].getAttribute("title");
         expect(read).toEqual(exp.storyTwo);
     });
 
     it('TC-102 Change the Story Type = "Overcoming the Monster" to "Quest"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.overcomingTheMonster].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.quest].click();
+        storySwitch(story.overcomingTheMonster, story.quest);
         let read = $$(sel.storyList)[story.quest].getAttribute("title");
         expect(read).toEqual(exp.storyThree);
     });
 
     it('TC-103 Change the Story Type = "Overcoming the Monster" to "Journey and Return"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.overcomingTheMonster].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.journeyAndReturn].click();
+        storySwitch(story.overcomingTheMonster, story.journeyAndReturn);
         let read = $$(sel.storyList)[story.journeyAndReturn].getAttribute("title");
         expect(read).toEqual(exp.storyFour);
     });
 
     it('TC-104 Change the Story Type = "Overcoming the Monster" to "Rags and Riches"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.overcomingTheMonster].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.ragsAndRiches].click();
+
+        storySwitch(story.overcomingTheMonster, story.ragsAndRiches);
         let read = $$(sel.storyList)[story.ragsAndRiches].getAttribute("title");
         expect(read).toEqual(exp.storyFive);
     });
 
     it('TC-105 Change the Story Type = "Overcoming the Monster" to "Tragedy"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.overcomingTheMonster].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.tragedy].click();
+        storySwitch(story.overcomingTheMonster, story.tragedy);
         let read = $$(sel.storyList)[story.tragedy].getAttribute("title");
         expect(read).toEqual(exp.storySix);
     });
 
     it('TC-106 Change the Story Type = "Overcoming the Monster" to "Comedy"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.overcomingTheMonster].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.comedy].click();
+        storySwitch(story.overcomingTheMonster, story.comedy);
         let read = $$(sel.storyList)[story.comedy].getAttribute("title");
         expect(read).toEqual(exp.storySeven);
     });
 
     it('TC-107 Change the Story Type = "Rebirth" to "Overcoming the Monster"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.rebirth].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.overcomingTheMonster].click();
+        storySwitch(story.rebirth, story.overcomingTheMonster);
         let read = $$(sel.storyList)[story.overcomingTheMonster].getAttribute("title");
         expect(read).toEqual(exp.storyOne);
     });
 
     it('TC-108 Change the Story Type = "Rebirth" to "Quest"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.rebirth].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.quest].click();
+        storySwitch(story.rebirth, story.quest);
         let read = $$(sel.storyList)[story.quest].getAttribute("title");
         expect(read).toEqual(exp.storyThree);
     });
 
     it('TC-109 Change the Story Type = "Rebirth" to "Journey and Return"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.rebirth].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.journeyAndReturn].click();
+        storySwitch(story.rebirth, story.journeyAndReturn);
         let read = $$(sel.storyList)[story.journeyAndReturn].getAttribute("title");
         expect(read).toEqual(exp.storyFour);
     });
 
     it('TC-110 Change the Story Type = "Rebirth" to "Rags and Riches"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.rebirth].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.ragsAndRiches].click();
+        storySwitch(story.rebirth, story.ragsAndRiches);
         let read = $$(sel.storyList)[story.ragsAndRiches].getAttribute("title");
         expect(read).toEqual(exp.storyFive);
     });
 
     it('TC-111 Change the Story Type = "Rebirth" to "Tragedy"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.rebirth].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.tragedy].click();
+        storySwitch(story.rebirth, story.tragedy);
         let read = $$(sel.storyList)[story.tragedy].getAttribute("title");
         expect(read).toEqual(exp.storySix);
     });
 
     it('TC-112 Change the Story Type = "Rebirth" to "Comedy"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.rebirth].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.comedy].click();
+        storySwitch(story.rebirth, story.comedy);
         let read = $$(sel.storyList)[story.comedy].getAttribute("title");
         expect(read).toEqual(exp.storySeven);
     });
 
     it('TC-113 Change the Story Type = "Quest" to "Overcoming the Monster"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.quest].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.overcomingTheMonster].click();
+        storySwitch(story.quest, story.overcomingTheMonster);
         let read = $$(sel.storyList)[story.overcomingTheMonster].getAttribute("title");
         expect(read).toEqual(exp.storyOne);
     });
 
     it('TC-114 Change the Story Type = "Quest" to "Rebirth"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.quest].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.rebirth].click();
+        storySwitch(story.quest, story.rebirth);
         let read = $$(sel.storyList)[story.rebirth].getAttribute("title");
         expect(read).toEqual(exp.storyTwo);
     });
 
     it('TC-115 Change the Story Type = "Quest" to "Journey and Return"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.quest].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.journeyAndReturn].click();
+
+        storySwitch(story.quest, story.journeyAndReturn);
         let read = $$(sel.storyList)[story.journeyAndReturn].getAttribute("title");
         expect(read).toEqual(exp.storyFour);
     });
 
     it('TC-116 Change the Story Type = "Quest" to "Rags and Riches"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.quest].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.ragsAndRiches].click();
+        storySwitch(story.quest, story.ragsAndRiches);
         let read = $$(sel.storyList)[story.ragsAndRiches].getAttribute("title");
         expect(read).toEqual(exp.storyFive);
     });
 
     it('TC-117 Change the Story Type = "Quest" to "Tragedy"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.quest].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.tragedy].click();
+        storySwitch(story.quest, story.tragedy);
         let read = $$(sel.storyList)[story.tragedy].getAttribute("title");
         expect(read).toEqual(exp.storySix);
     });
 
     it('TC-118 Change the Story Type = "Quest" to "Comedy"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.quest].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.comedy].click();
+        storySwitch(story.quest, story.comedy);
         let read = $$(sel.storyList)[story.comedy].getAttribute("title");
         expect(read).toEqual(exp.storySeven);
     });
 
     it('TC-119 Change the Story Type = "Journey and Return" to "Overcoming the Monster"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.journeyAndReturn].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.overcomingTheMonster].click();
+        storySwitch(story.journeyAndReturn, story.overcomingTheMonster);
         let read = $$(sel.storyList)[story.overcomingTheMonster].getAttribute("title");
         expect(read).toEqual(exp.storyOne);
     });
 
     it('TC-120 Change the Story Type = "Journey and Return" to "Rebirth"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.journeyAndReturn].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.rebirth].click();
+        storySwitch(story.journeyAndReturn, story.rebirth);
         let read = $$(sel.storyList)[story.rebirth].getAttribute("title");
         expect(read).toEqual(exp.storyTwo);
     });
 
     it('TC-121 Change the Story Type = "Journey and Return" to "Quest"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.journeyAndReturn].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.quest].click();
+        storySwitch(story.journeyAndReturn, story.quest);
         let read = $$(sel.storyList)[story.quest].getAttribute("title");
         expect(read).toEqual(exp.storyThree);
     });
 
     it('TC-122 Change the Story Type = "Journey and Return" to "Rags and Riches"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.journeyAndReturn].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.ragsAndRiches].click();
+        storySwitch(story.journeyAndReturn, story.ragsAndRiches);
         let read = $$(sel.storyList)[story.ragsAndRiches].getAttribute("title");
         expect(read).toEqual(exp.storyFive);
     });
 
     it('TC-123 Change the Story Type = "Journey and Return" to "Tragedy"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.journeyAndReturn].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.tragedy].click();
+        storySwitch(story.journeyAndReturn, story.tragedy);
         let read = $$(sel.storyList)[story.tragedy].getAttribute("title");
         expect(read).toEqual(exp.storySix);
     });
 
     it('TC-124 Change the Story Type = "Journey and Return" to "Comedy"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.journeyAndReturn].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.comedy].click();
+        storySwitch(story.journeyAndReturn, story.comedy);
         let read = $$(sel.storyList)[story.comedy].getAttribute("title");
         expect(read).toEqual(exp.storySeven);
     });
 
     it('TC-125 Change the Story Type = "Rags and Riches" to "Overcoming the Monster"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.ragsAndRiches].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.overcomingTheMonster].click();
+        storySwitch(story.ragsAndRiches, story.overcomingTheMonster);
         let read = $$(sel.storyList)[story.overcomingTheMonster].getAttribute("title");
         expect(read).toEqual(exp.storyOne);
     });
 
     it('TC-126 Change the Story Type = "Rags and Riches" to "Rebirth"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.ragsAndRiches].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.rebirth].click();
+        storySwitch(story.ragsAndRiches, story.rebirth);
         let read = $$(sel.storyList)[story.rebirth].getAttribute("title");
         expect(read).toEqual(exp.storyTwo);
     });
 
     it('TC-127 Change the Story Type = "Rags and Riches" to "Quest"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.ragsAndRiches].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.quest].click();
+        storySwitch(story.ragsAndRiches, story.quest);
         let read = $$(sel.storyList)[story.quest].getAttribute("title");
         expect(read).toEqual(exp.storyThree);
     });
 
     it('TC-128 Change the Story Type = "Rags and Riches" to "Journey and Return"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.ragsAndRiches].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.journeyAndReturn].click();
+        storySwitch(story.ragsAndRiches, story.journeyAndReturn);
         let read = $$(sel.storyList)[story.journeyAndReturn].getAttribute("title");
         expect(read).toEqual(exp.storyFour);
     });
 
     it('TC-129 Change the Story Type = "Rags and Riches" to "Tragedy"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.ragsAndRiches].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.tragedy].click();
+        storySwitch(story.ragsAndRiches, story.tragedy);
         let read = $$(sel.storyList)[story.tragedy].getAttribute("title");
         expect(read).toEqual(exp.storySix);
     });
 
     it('TC-130 Change the Story Type = "Rags and Riches" to "Comedy"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.ragsAndRiches].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.comedy].click();
+        storySwitch(story.ragsAndRiches, story.comedy);
         let read = $$(sel.storyList)[story.comedy].getAttribute("title");
         expect(read).toEqual(exp.storySeven);
     });
 
     it('TC-131 Change the Story Type = "Tragedy" to "Overcoming the Monster"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.tragedy].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.overcomingTheMonster].click();
+        storySwitch(story.tragedy, story.overcomingTheMonster);
         let read = $$(sel.storyList)[story.overcomingTheMonster].getAttribute("title");
         expect(read).toEqual(exp.storyOne);
     });
 
     it('TC-132 Change the Story Type = "Tragedy" to "Rebirth"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.tragedy].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.rebirth].click();
+        storySwitch(story.tragedy, story.rebirth);
         let read = $$(sel.storyList)[story.rebirth].getAttribute("title");
         expect(read).toEqual(exp.storyTwo);
     });
 
     it('TC-133 Change the Story Type = "Tragedy" to "Quest"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.tragedy].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.quest].click();
+        storySwitch(story.tragedy, story.quest);
         let read = $$(sel.storyList)[story.quest].getAttribute("title");
         expect(read).toEqual(exp.storyThree);
     });
 
     it('TC-134 Change the Story Type = "Tragedy" to "Journey and Return"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.tragedy].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.journeyAndReturn].click();
+        storySwitch(story.tragedy, story.journeyAndReturn);
         let read = $$(sel.storyList)[story.journeyAndReturn].getAttribute("title");
         expect(read).toEqual(exp.storyFour);
     });
 
     it('TC-135 Change the Story Type = "Tragedy" to "Rags and Riches"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.tragedy].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.ragsAndRiches].click();
+        storySwitch(story.tragedy, story.ragsAndRiches);
         let read = $$(sel.storyList)[story.ragsAndRiches].getAttribute("title");
         expect(read).toEqual(exp.storyFive);
     });
 
     it('TC-136 Change the Story Type = "Tragedy" to "Comedy"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.tragedy].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.comedy].click();
+        storySwitch(story.tragedy, story.comedy);
         let read = $$(sel.storyList)[story.comedy].getAttribute("title");
         expect(read).toEqual(exp.storySeven);
     });
 
     it('TC-137 Change the Story Type = "Comedy" to "Overcoming the Monster"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.comedy].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.overcomingTheMonster].click();
+        storySwitch(story.comedy, story.overcomingTheMonster);
         let read = $$(sel.storyList)[story.overcomingTheMonster].getAttribute("title");
         expect(read).toEqual(exp.storyOne);
     });
 
     it('TC-138 Change the Story Type = "Comedy" to "Rebirth"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.comedy].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.rebirth].click();
+        storySwitch(story.comedy, story.rebirth);
         let read = $$(sel.storyList)[story.rebirth].getAttribute("title");
         expect(read).toEqual(exp.storyTwo);
     });
 
     it('TC-139 Change the Story Type = "Comedy" to "Quest"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.comedy].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.quest].click();
+        storySwitch(story.comedy, story.quest);
         let read = $$(sel.storyList)[story.quest].getAttribute("title");
         expect(read).toEqual(exp.storyThree);
     });
 
     it('TC-140 Change the Story Type = "Comedy" to "Journey and Return"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.comedy].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.journeyAndReturn].click();
+        storySwitch(story.comedy, story.journeyAndReturn);
         let read = $$(sel.storyList)[story.journeyAndReturn].getAttribute("title");
         expect(read).toEqual(exp.storyFour);
     });
 
     it('TC-141 Change the Story Type = "Comedy" to "Rags and Riches"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.comedy].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.ragsAndRiches].click();
+        storySwitch(story.comedy, story.ragsAndRiches);
         let read = $$(sel.storyList)[story.ragsAndRiches].getAttribute("title");
         expect(read).toEqual(exp.storyFive);
     });
 
     it('TC-142 Change the Story Type = "Comedy" to "Tragedy"', function () {
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.comedy].click();
-        $(sel.storyType).click();
-        $$(sel.storyList)[story.tragedy].click();
+        storySwitch(story.comedy, story.tragedy);
         let read = $$(sel.storyList)[story.tragedy].getAttribute("title");
         expect(read).toEqual(exp.storySix);
     });
 
     it('TC-143 Submit button is disabled after a story type field skipped', function () {
-        $(sel.name).setValue(name.default);
-        $$(sel.radioButtons)[gender.she].click();
-        $(sel.age).setValue(age.default);
+        inputValues4(name.default, gender.she, age.default, -1);
         let submitBtn = $(sel.submit).isEnabled();
         expect(submitBtn).toEqual(false);
     });
-
-
 
 });
 
