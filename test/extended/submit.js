@@ -92,6 +92,7 @@ describe('Submit button', function () {
             inputValue4Submit(name.default, gender.she, age.default, story.comedy);
             let storyBody = $$(sel.storyText)[generatedStory.story].getText();
             expect(storyBody).toEqual(exp.story);
+            //Blocked by TC-189
         });
 
         it('TC-184 Age is Correct and appears in the story.', function () {
@@ -119,6 +120,7 @@ describe('Submit button', function () {
             inputValue4Submit(name.default, gender.she, age.default, story.comedy);
             let storyBody = $$(sel.storyText)[generatedStory.story].getText();
             expect(storyBody).toEqual(exp.story);
+            //Blocked by TC-189
         });
 
         it('TC-189 Executed story is correct and has no spelling or grammatical errors.', function () {
@@ -141,6 +143,12 @@ describe('Submit button', function () {
             $(sel.submit).click();
             let avatar = $(sel.avatar).isDisplayed();
             expect(avatar).toEqual(false);
+        });
+
+        it('TC-191 User doesn\'t upload an avatar.', function () {
+            inputValue4Submit(name.default, gender.she, age.default, story.comedy)
+            let avatarField = $(sel.avatar).isDisplayed();
+            expect(avatarField).toEqual(false);
         });
 
         it('TC-202 The moral is correct and has no spelling or grammatical errors.', function () {
