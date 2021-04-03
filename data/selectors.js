@@ -5,6 +5,7 @@ const elements = {
     "name": "#name",
     "genderLabel": "label[for=gender]",
     "radioButtons": ".ant-radio",
+    "radioSelected": ".ant-radio-input",
     "radioButtonsL": ".ant-radio-wrapper",
     "ageLabel": "label[for=age]",
     "age": "#age",
@@ -27,6 +28,9 @@ const elements = {
     "outside": "#root",
     "imageThumbnail": ".ant-upload-list-item-thumbnail",
     "binIcon": ".ant-upload-list-item-actions",
+    "storyTitle": "h4",
+    "avatar": ".error__pic",
+    "storyText": ".card-text"
 }
 
 module.exports = elements;
