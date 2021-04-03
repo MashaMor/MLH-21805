@@ -14,6 +14,19 @@ const gender = {
 
 const age = {
     "default": "1234567890",
+    "digit1": "1",
+    "digit2": "2",
+    "digits12": "999999999999",
+    "digits13": "9999999999999",
+    "digitsAny": "1234567890",
+    "digitsWithSpaces": "123 78 9",
+    "digitsWith0": "00001",
+    "letters": "abcdef",
+    "zero": "0",
+    "symbols": ".,/!@#{}[]",
+    "digitsNegative": "-1",
+    "floatNumbers": "1.5",
+    "lettersRus": "абвгдежзик"
 }
 
 const story = {
