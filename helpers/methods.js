@@ -1,6 +1,6 @@
 import sel from "../data/selectors"
 
-function inputValues4(name, gender, age, story){
+function inputValues4(name, gender, age, story, submit= 0){
     if (name !== "")
         $(sel.name).setValue(name);
     if (gender >= 0 && gender <=2)
@@ -11,6 +11,8 @@ function inputValues4(name, gender, age, story){
         $(sel.storyType).click();
         $$(sel.storyList)[story].click();
     }
+    if (submit > 0)
+        $(sel.submit).click();
 }
 
 function inputValue4Submit(name, gender, age, story) {
