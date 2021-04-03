@@ -15,7 +15,14 @@ const expResults = {
     "imageLabel": "5. Upload an image (optional)",
     "imagePH": "Click or drag and drop",
     "submitLabel": "Create!",
-    "nameError": "70 symbols max"
+    "nameError": "70 symbols max",
+    "storyOne": "Overcoming the Monster",
+    "storyTwo": "Rebirth",
+    "storyThree": "Quest",
+    "storyFour": "Journey and Return",
+    "storyFive": "Rags and Riches",
+    "storySix": "Tragedy",
+    "storySeven": "Comedy"
 }
 
 module.exports = expResults;
