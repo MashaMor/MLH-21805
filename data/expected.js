@@ -16,7 +16,7 @@ const expResults = {
     "itLabel": "it",
     "ageLabel": "3. How old is your Hero?",
     "agePH": "Hero's age",
-    "storyLabel": "4. Type of the story",
+    "storyLabel": "4. What type of story would you like to read?",
     "storyPH": "Type of the story",
     "imageLabel": "5. Upload an image (optional)",
     "imagePH": "Click or drag and drop",

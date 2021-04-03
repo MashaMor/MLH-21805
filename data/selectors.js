@@ -6,7 +6,7 @@ const elements = {
     "genderLabel": "label[for=gender]",
     "radioButtons": ".ant-radio",
     "radioSelected": ".ant-radio-input",
-    "radioButtonsL": ".ant-radio-wrapper",
+    "radioButtonsLabels": ".ant-radio-wrapper",
     "ageLabel": "label[for=age]",
     "age": "#age",
     "ageSpin": ".ant-input-number-handler-wrap",

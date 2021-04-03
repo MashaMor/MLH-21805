@@ -1,5 +1,6 @@
 import sel from '../../data/selectors';
-import exp from '../../data/expected'
+import exp from '../../data/expected';
+import {gender} from '../../data/testData';
 
 describe('Labels are correct', function () {
 
@@ -28,17 +29,17 @@ describe('Labels are correct', function () {
     });
 
     it('TC-019 Gender radio button 1 label = he', function () {
-        let label = $$(sel.radioButtonsLabels)[0].getText();
+        let label = $$(sel.radioButtonsLabels)[gender.he].getText();
         expect(label).toEqual(exp.heLabel);
     });
 
     it('TC-020 Gender radio button 2 label = she', function () {
-        let label = $$(sel.radioButtonsLabels)[1].getText();
+        let label = $$(sel.radioButtonsLabels)[gender.she].getText();
         expect(label).toEqual(exp.sheLabel);
     });
 
     it('TC-021 Gender radio button 3 label = it', function () {
-        let label = $$(sel.radioButtonsLabels)[2].getText();
+        let label = $$(sel.radioButtonsLabels)[gender.it].getText();
         expect(label).toEqual(exp.itLabel);
     });
 

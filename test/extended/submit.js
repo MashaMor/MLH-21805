@@ -1,7 +1,7 @@
 import sel from '../../data/selectors';
-import exp from '../../data/expected'
+import exp from '../../data/expected';
 import {name, gender, age, story, generatedStory} from '../../data/testData';
-import {inputValues4, inputValue4Submit} from '../../helpers/methods'
+import {inputValues4, inputValue4Submit} from '../../helpers/methods';
 import path from "path";
 
 describe('Submit button', function () {

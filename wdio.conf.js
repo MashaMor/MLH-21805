@@ -31,7 +31,7 @@ exports.config = {
         './test/extended/story.js',
         './test/extended/images.js',
         './test/extended/submit.js',
-        //'./test/extended/reset.js'
+        './test/extended/reset.js'
     ],
     //
     // ============
@@ -76,7 +76,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel: 'silent',
     //
     // Set specific log levels per logger
     // loggers:

@@ -1,5 +1,6 @@
 import sel from '../../data/selectors';
-import exp from '../../data/expected'
+import exp from '../../data/expected';
+import {gender} from '../../data/testData';
 
 describe('My Little Hero', function () { //define suite title by passing a string
 
@@ -44,17 +45,17 @@ describe('My Little Hero', function () { //define suite title by passing a strin
         });
 
         it('TC-007a Gender radio button "he" is present', function () {
-            let buttonHe = $$(sel.radioButtons)[0].isDisplayed();
+            let buttonHe = $$(sel.radioButtons)[gender.he].isDisplayed();
             expect(buttonHe).toEqual(true);
         });
 
         it('TC-007b Gender radio button "she" is present', function () {
-            let buttonShe = $$(sel.radioButtons)[1].isDisplayed();
+            let buttonShe = $$(sel.radioButtons)[gender.she].isDisplayed();
             expect(buttonShe).toEqual(true);
         });
 
         it('TC-007c Gender radio button "it" is present', function () {
-            let buttonIt = $$(sel.radioButtons)[2].isDisplayed();
+            let buttonIt = $$(sel.radioButtons)[gender.it].isDisplayed();
             expect(buttonIt).toEqual(true);
         });
 
