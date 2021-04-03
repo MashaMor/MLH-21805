@@ -17,6 +17,8 @@ const expResults = {
     "ageLabel": "3. How old is your Hero?",
     "agePH": "Hero's age",
     "storyLabel": "4. What type of story would you like to read?",
+    "trimSpaces": "123789",
+    "ageError": "looks like unreal age",
     "storyPH": "Type of the story",
     "imageLabel": "5. Upload an image (optional)",
     "imagePH": "Click or drag and drop",
@@ -31,7 +33,9 @@ const expResults = {
     "moral": "Moral: When you quarrel amongst yourselves, someone else gains from it.",
     "image-": "/static/error.86e8f937.png",
     "resetBtnLabel": "Try again!",
-    "emptyField": ""
+    "emptyField": "",
+    "one": "1",
+    "two": "2"
 
 
 }

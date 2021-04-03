@@ -30,7 +30,7 @@ const elements = {
     "binIcon": ".ant-upload-list-item-actions",
     "storyTitle": "h4",
     "avatar": ".error__pic",
-    "storyText": ".card-text"
+    "storyText": ".card-text",
 }
 
 module.exports = elements;

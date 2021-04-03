@@ -17,21 +17,11 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/smoke/*.js',
-        './test/extended/*.js'
+        './test/smoke/*.js'
     ],
     // Patterns to exclude.
     exclude: [
-        './test/smoke/elementsExist.js',
-        './test/smoke/labelsCorrect.js',
-        './test/smoke/smokeFunctional.js',
-        './test/extended/name.js',
-        './test/extended/gender.js',
-        './test/extended/age.js',
-        './test/extended/story.js',
-        './test/extended/images.js',
-        './test/extended/submit.js',
-        './test/extended/reset.js'
+        // 'path/to/excluded/files'
     ],
     //
     // ============
@@ -76,7 +66,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'silent',
+    logLevel: 'info',
     //
     // Set specific log levels per logger
     // loggers:
