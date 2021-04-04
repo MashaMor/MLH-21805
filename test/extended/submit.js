@@ -1,7 +1,7 @@
 import sel from '../../data/selectors';
 import exp from '../../data/expected';
 import {name, gender, age, story, generatedStory} from '../../data/testData';
-import {inputValues4} from '../../helpers/methods';
+import {inputValues4, imageUpload} from '../../helpers/methods';
 import path from "path";
 
 describe('Submit button', function () {
@@ -129,14 +129,10 @@ describe('Submit button', function () {
         });
 
         it('TC-190 Uploaded avatar is present.', function () {
-            let fileUpload = $(sel.imageUpload);
             let filePath = path.join(__dirname, '../../data/photo/Ameliia.jpg');
-            let remoteFilePath = browser.uploadFile(filePath);
-            let avatar = $(sel.avatar).isDisplayed();
-            browser.execute((el) => el.style.display = 'block', fileUpload);
-            fileUpload.waitForDisplayed();
-            fileUpload.setValue(remoteFilePath);
+            imageUpload(filePath);
             inputValues4(name.default, gender.she, age.default, story.comedy,1);
+            let avatar = $(sel.avatar).isDisplayed();
             expect(avatar).toEqual(false);
         });
 
