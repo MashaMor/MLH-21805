@@ -3,7 +3,7 @@ import {name, gender, age, story} from '../../data/testData';
 import {inputValues4} from '../../helpers/methods';
 import exp from "../../data/expected.js";
 
-describe('Age field suit', function () {
+describe('Age', function () {
 
     before('Open App', function () {
         browser.url('');
@@ -149,8 +149,8 @@ describe('Age field suit', function () {
 
         it('TC-198 Empty Age field (Submit button is disabled)', function () {
             inputValues4(name.default, gender.she, -1, story.comedy);
-            let submBtn = $(sel.submit).isEnabled();
-            expect(submBtn).toEqual(false);
+            let submitBtn = $(sel.submit).isEnabled();
+            expect(submitBtn).toEqual(false);
         });
     });
 

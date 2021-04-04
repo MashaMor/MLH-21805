@@ -1,9 +1,7 @@
 const elements = {
     "header": "h3",
     "instruction": "p",
-
     "requiredLabel": ".ant-form-item-required",
-
     "nameLabel": "label[for=name]",
     "name": "#name",
     "genderLabel": "label[for=gender]",

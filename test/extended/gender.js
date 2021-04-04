@@ -2,7 +2,7 @@ import sel from '../../data/selectors';
 import {name, age, gender, story} from '../../data/testData';
 import {inputValues4} from '../../helpers/methods';
 
-describe('Testing extended Gender field ', function () {
+describe('Gender', function () {
 
     before('Open App', function (){
         browser.url('');
@@ -13,6 +13,7 @@ describe('Testing extended Gender field ', function () {
     });
 
     describe('Positive cases', function () {
+
         it('TC-047 Button HE is enabled', function () {
             $$(sel.radioButtons)[gender.he].click();
             let genderHeBtn = $$(sel.radioSelected)[gender.he].isSelected();
@@ -108,13 +109,17 @@ describe('Testing extended Gender field ', function () {
             let genderSheBtn = $$(sel.radioSelected)[gender.she].isSelected();
             expect(genderSheBtn).toEqual(true);
         });
+
     });
 
     describe('Negative cases', function () {
+
         it('TC-059  Not chosen button (Submit button is disabled)', function () {
             inputValues4(name.default, -1, age.default, story.comedy);
             let submitBtn = $(sel.submit).isEnabled();
             expect(submitBtn).toEqual(false);
         });
+
     });
+
 });

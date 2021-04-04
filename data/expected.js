@@ -44,7 +44,6 @@ const expResults = {
     "storySix": "Tragedy",
     "storySeven": "Comedy"
 
-
 }
 
 module.exports = expResults;
