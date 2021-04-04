@@ -1,5 +1,4 @@
-import sel from "../data/selectors"
-import {gender, name, story} from "../data/testData";
+import sel from "../data/selectors";
 
 function inputValues4(name, gender, age, story, submit= 0){
     if (name !== "")
@@ -16,16 +15,6 @@ function inputValues4(name, gender, age, story, submit= 0){
         $(sel.submit).click();
 }
 
-function inputValue4Submit(name, gender, age, story) {
-    $(sel.name).setValue(name);
-    $$(sel.radioButtons)[gender].click();
-    $(sel.age).setValue(age);
-    $(sel.storyType).click();
-    $$(sel.storyList)[story].click();
-    $(sel.submit).click();
-
-}
-
 function storySwitch(story1, story2) {
     $(sel.storyType).click();
     $$(sel.storyList)[story1].click();
@@ -38,4 +27,4 @@ function storySelect(story) {
     $$(sel.storyList)[story].click();
 }
 
-module.exports = {inputValues4, inputValue4Submit, storySwitch, storySelect};
+module.exports = {inputValues4, storySwitch, storySelect};
