@@ -126,6 +126,3 @@ describe('Story Type part 2', function () {
     });
 
 });
-
-
-

@@ -33,7 +33,7 @@ const age = {
     "symbols": ".,/!@#{}[]",
     "digitsNegative": "-1",
     "floatNumbers": "1.5",
-    "lettersRus": "абвгдежзик"
+    "lettersRus": "абвгдежзик",
 }
 
 const story = {
@@ -43,12 +43,12 @@ const story = {
     "journeyAndReturn": 3,
     "ragsAndRiches": 4,
     "tragedy": 5,
-    "comedy": 6
+    "comedy": 6,
 }
 
 const generatedStory = {
     "story": 0,
-    "moral": 1
+    "moral": 1,
 }
 
-module.exports = {name, gender, age, story, generatedStory}
+module.exports = {name, gender, age, story, generatedStory};
