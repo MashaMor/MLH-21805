@@ -27,4 +27,17 @@ function storySelect(story) {
     $$(sel.storyList)[story].click();
 }
 
-module.exports = {inputValues4, storySwitch, storySelect};
+function imageUpload (filePath) {
+    let fileUpload = $(sel.imageUpload);
+    let remoteFilePath = browser.uploadFile(filePath);
+    browser.execute((el) => el.style.display = 'block', fileUpload);
+    fileUpload.waitForDisplayed();
+    fileUpload.setValue(remoteFilePath);
+}
+
+module.exports = {
+    inputValues4,
+    storySwitch,
+    storySelect,
+    imageUpload,
+};
