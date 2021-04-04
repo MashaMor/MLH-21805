@@ -1,9 +1,16 @@
 const name = {
     "default": "QueenBee!1",
     "symbol1": "i",
-    "symbol70": "",
-    "symbolSpecial": "",
-
+    "symbol70": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+    "symbol71": "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234567890123456789",
+    "symbolSpecial": ",.;`~!@#$%'/=^&*()_+{}:?><[]",
+    "symbolSpace": "ABC abc",
+    "space": "   ",
+    "letters": "Abc",
+    "lettersRus": "абвгде",
+    "upperCase": "ABC",
+    "lowerCase": "abc",
+    "digits": "1234567890",
 }
 
 const gender = {

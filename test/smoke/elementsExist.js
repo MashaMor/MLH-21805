@@ -60,17 +60,17 @@ describe('My Little Hero', function () { //define suite title by passing a strin
         });
 
         it('TC-007d Gender radio button label "he" is present', function () {
-            let labelHe = $$(sel.radioButtonsLabels)[0].isDisplayed();
+            let labelHe = $$(sel.radioButtonsLabels)[gender.he].isDisplayed();
             expect(labelHe).toEqual(true);
         });
 
         it('TC-007e Gender radio button label "she" is present', function () {
-            let labelShe = $$(sel.radioButtonsLabels)[1].isDisplayed();
+            let labelShe = $$(sel.radioButtonsLabels)[gender.she].isDisplayed();
             expect(labelShe).toEqual(true);
         });
 
         it('TC-007f Gender radio button label "it" is present', function () {
-            let labelIt = $$(sel.radioButtonsLabels)[2].isDisplayed();
+            let labelIt = $$(sel.radioButtonsLabels)[gender.it].isDisplayed();
             expect(labelIt).toEqual(true);
         });
 

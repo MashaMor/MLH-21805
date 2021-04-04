@@ -16,7 +16,6 @@ describe('Required fields & Story created', function () {
 
     it('TC-027 User is redirected to the story page', function () {
         browser.refresh();
-
         inputValues4(name.default, gender.she, age.default, story.comedy);
         $(sel.submit).click();
         let tryAgainBtn = $(sel.tryAgainBtn).isDisplayed();
