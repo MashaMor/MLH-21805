@@ -43,6 +43,7 @@ const expResults = {
     "emptyField": "",
     "one": "1",
     "two": "2",
+    "dataImage": "data:image"
 }
 
 module.exports = expResults;
