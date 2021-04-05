@@ -129,12 +129,15 @@ describe('Submit button', function () {
         });
 
         it('TC-190 Uploaded avatar is present.', function () {
-            let filePath = path.join(__dirname, '../../data/photo/Ameliia.jpg');
-            imageUpload(filePath);
-            inputValues4(name.default, gender.she, age.default, story.comedy,1);
-            let avatar = $(sel.avatar).isDisplayed();
-            expect(avatar).toEqual(false);
+            inputValues4(name.default, gender.she, age.default, story.comedy);
+            let filepath = path.join(__dirname, '../../data/photo/Ameliia.jpg');
+            imageUpload(filepath);
+            $(sel.submit).click();
+            let avatar = $(sel.avatar).getAttribute('src');
+            let res = avatar.match(/data:image/);
+            expect(res.toString().trim()).toEqual(exp.dataImage);
         });
+
 
         it('TC-191 User doesn\'t upload an avatar.', function () {
             inputValues4(name.default, gender.she, age.default, story.comedy, 1);
