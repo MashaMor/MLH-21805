@@ -1,5 +1,3 @@
-import path from "path";
-
 const name = {
     "default": "QueenBee!1",
     "symbol1": "i",
