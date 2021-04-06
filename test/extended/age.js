@@ -148,7 +148,7 @@ describe('Age', function () {
         });
 
         it('TC-198 Empty Age field (Submit button is disabled)', function () {
-            inputValues4(name.default, gender.she, -1, story.comedy);
+            inputValues4(name.default, gender.she, '', story.comedy);
             let submitBtn = $(sel.submit).isEnabled();
             expect(submitBtn).toEqual(false);
         });

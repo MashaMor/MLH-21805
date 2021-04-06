@@ -1,6 +1,6 @@
 import sel from "../data/selectors";
 
-function inputValues4(name, gender, age, story, submit= 0){
+function inputValues4(name, gender, age, story, submit= 0, reset = 0){
     if (name !== "")
         $(sel.name).setValue(name);
     if (gender >= 0 && gender <=2)
@@ -13,6 +13,8 @@ function inputValues4(name, gender, age, story, submit= 0){
     }
     if (submit > 0)
         $(sel.submit).click();
+    if (reset > 0)
+        $(sel.tryAgainBtn).click();
 }
 
 function storySwitch(story1, story2) {

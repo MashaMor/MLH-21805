@@ -75,4 +75,12 @@ const image = {
     "jpg45": '../../data/images/45mb-jpeg.jpg',
 }
 
-module.exports = {name, gender, age, story, generatedStory, image};
+const submit = {
+    "yes": 1,
+}
+
+const reset = {
+    "yes": 1,
+}
+
+module.exports = {name, gender, age, story, generatedStory, image, submit, reset};

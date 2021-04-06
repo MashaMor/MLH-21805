@@ -96,7 +96,7 @@ describe('Name', function () {
         });
 
         it('TC-044 User cannot create story without name', function () {
-            inputValues4(-1, gender.she, age.default, story.comedy);
+            inputValues4('', gender.she, age.default, story.comedy);
             let submitBtn = $(sel.submit).isEnabled();
             expect(submitBtn).toEqual(false);
         });
@@ -108,7 +108,7 @@ describe('Name', function () {
             expect(error).toBeDisplayed();
         });
 
-        it('TC-044 User cannot create story with "   " (space) name', function () {
+        it('TC-046 User cannot create story with "   " (space) name', function () {
             inputValues4(name.space, gender.she, age.default, story.comedy);
             let submitBtn = $(sel.submit).isEnabled();
             expect(submitBtn).toEqual(false);
