@@ -43,7 +43,7 @@ describe('Submit button', function () {
             inputValues4(name.default, gender.she, age.default, story.comedy, submit.yes);
             let storyBody = $$(sel.storyText)[generatedStory.story].getText();
             let res = storyBody.match(/QueenBee!1/);
-            expect(res.toString()).toEqual(name.default);
+            expect(res.toString()).toEqual(exp.name);
         });
 
         it('TC-180a Gender is correct (+possessive) and appears in the story: "he"', function () {
@@ -124,7 +124,6 @@ describe('Submit button', function () {
             let res = avatar.match(/data:image/);
             expect(res.toString().trim()).toEqual(exp.dataImage);
         });
-
 
         it('TC-191 User doesn\'t upload an avatar.', function () {
             inputValues4(name.default, gender.she, age.default, story.comedy, submit.yes);

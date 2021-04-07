@@ -43,7 +43,8 @@ const expResults = {
     "emptyField": "",
     "one": "1",
     "two": "2",
-    "dataImage": "data:image"
+    "dataImage": "data:image",
+    "name": "QueenBee!1"
 }
 
 module.exports = expResults;

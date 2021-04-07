@@ -65,7 +65,7 @@ describe('Reset button', function () {
 
         it('TC-196-(age) All fields are blank when reset button is clicked', function () {
             inputValues4(name.default, gender.she, age.default, story.comedy, submit.yes, reset.yes);
-            let ageField = $(sel.name).getText();
+            let ageField = $(sel.age).getText();
             expect(ageField).toEqual(exp.emptyField);
         });
 
